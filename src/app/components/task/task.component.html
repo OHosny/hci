@@ -1,0 +1,15 @@
+<div class="container">
+    <div *ngIf="!taskId">
+        <p class=" alert alert-danger">there is no task Id</p>
+    </div>
+<div *ngIf="taskId">
+    <input type="text" class="form-control" placeholder="Task Title" [(ngModel)]="task.title">
+    <input #taskDate type="date" class="form-control" placeholder="Enter the date"[(ngModel)]="task.date">
+    <textarea class="form-control" placeholder="Write the task description"[(ngModel)]="task.description"></textarea>
+    <button class="btn btn-primary"(click)="updateTask()">Update</button>
+    <button class="btn btn-danger" (click)="deleteTask()">Delete</button>
+    <button class="btn btn-info"(click)="cancelTask()">Cancel</button>
+    
+
+</div>
+</div>

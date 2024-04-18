@@ -13,7 +13,13 @@
       
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let task of tasksService.tasks; index as i">
-          {{task.title}}
+            <a [routerLink]="['/task',i]">
+            {{task.title}}
+            </a>
+            <label>
+              <input type="checkbox" [checked]="task.isCompleted" (change)="toggleCheckbox(i)">
+              
+            </label>
           <button class="btn btn-danger" (click)="deleteTask(i)">Delete</button>
         </li>
       </ul>
