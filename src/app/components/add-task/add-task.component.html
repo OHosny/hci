@@ -2,7 +2,7 @@
     <h2 class="text-center">Add a New Task</h2>
     <input #taskTitle type="text" class="form-control" placeholder="write the task title here">
     <input #taskDate type="date" class="form-control" placeholder="Enter the date">
-    <textarea #taskDescription class="form-control" placeholder="write the desc here"></textarea>
+    <textarea #taskDescription class="form-control" placeholder="write the description here"></textarea>
     <button class="btn btn-success" (click)="saveTask(taskTitle, taskDescription,taskDate)">Save</button>
     <button class="btn btn-danger" (click)="cancelTask()">Cancel</button>
 </div>

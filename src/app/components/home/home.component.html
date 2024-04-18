@@ -1,7 +1,7 @@
 <div class="container">
 
     <div>
-        <a routerLink="/add-task" >Add Task</a>
+        <a routerLink="/add-task"class="btn btn-secondery" >Add Task</a>
     </div>
     <div *ngIf="tasksService.tasks.length==10">
     <p>
@@ -20,7 +20,7 @@
               <input type="checkbox" [checked]="task.isCompleted" (change)="toggleCheckbox(i)">
               
             </label>
-          <button class="btn btn-danger" (click)="deleteTask(i)">Delete</button>
+          <button class="del-button btn btn-danger" (click)="deleteTask(i)">Delete</button>
         </li>
       </ul>
       </div>
